@@ -18,12 +18,12 @@ function App() {
   
 
 
-  async function handleSubmit(): Function {
+  async function handleSubmit() {
     let inputValue  = document.querySelector("#input").value;
     
 
     // 🏀api key not in!!!! 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=db2463a3751ca17d386c841c93af9e5b`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${process.env.APIkey}`;
 
     
     let response = await fetch(url);
